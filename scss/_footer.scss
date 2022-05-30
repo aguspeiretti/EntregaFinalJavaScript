@@ -1,0 +1,43 @@
+.footerPrincipal {
+  width: 100vw;
+  height: 5vh;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  h6 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+.footerAbout {
+  width: 100vw;
+  height: 5vh;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  h6 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+
+.footerMembership {
+  width: 100vw;
+  height: 5vh;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  h6 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-right: 40px;
+  }
+}

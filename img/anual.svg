@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.7066mm" height="33.8666mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 127 181"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:1.06746}
+    .str1 {stroke:#70FFA2;stroke-width:1.06746}
+    .fil2 {fill:none}
+    .fil1 {fill:black}
+    .fil0 {fill:white}
+    .fnt1 {font-weight:300;font-size:20.0005px;font-family:'Poppins Light'}
+    .fnt0 {font-weight:300;font-size:24.8104px;font-family:'Poppins Light'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="127" height="181" rx="8" ry="8"/>
+  <text x="56" y="51"  class="fil1 fnt0">A</text>
+  <polygon class="fil2 str0" points="64,21 73,26 82,32 82,42 82,53 73,58 64,63 55,58 46,53 46,42 46,32 55,26 "/>
+  <text x="36" y="133"  class="fil1 fnt1">Anual</text>
+  <polygon class="fil2 str1" points="64,17 75,23 86,29 86,42 86,55 75,61 64,67 53,61 42,55 42,42 42,29 53,23 "/>
+ </g>
+</svg>

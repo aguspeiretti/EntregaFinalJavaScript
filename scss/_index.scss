@@ -1,0 +1,65 @@
+.mainPrincipal {
+  width: 100vw;
+  height: 95vh;
+  .contenedorPrincipal {
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .tituloPrincipal {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(25px, 4vw, 150px);
+      width: 45%;
+      line-height: 70px;
+      color: white;
+      font-weight: 600;
+      margin-left: 100px;
+    }
+    .box {
+      margin-left: 110px;
+      margin-top: 50px;
+    }
+    .btnPrincipal {
+      width: 70%;
+      h2 {
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+      }
+      .boton1 {
+        width: 15vw;
+        min-width: 150px;
+        height: 10vh;
+        border: none;
+        margin-top: 30px;
+        margin-left: 35px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: ease-out 0.5s;
+        font-size: 1.2rem;
+        font-weight: 600;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+
+        &:hover {
+          box-shadow: inset 300px 0 0 0 #ffffff;
+          cursor: pointer;
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+}
