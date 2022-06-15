@@ -63,7 +63,7 @@
 .container .box .content p {
   margin-top: 10px;
 }
-.container .box .content a {
+.container .box .content .btnCard {
   text-decoration: none;
   background: #000;
   color: #fff;
@@ -73,7 +73,7 @@
 }
 .container .box .content h2,
 .container .box .content p,
-.container .box .content a {
+.container .box .content .btnCard {
   opacity: 0;
   transition: 0.5s;
   transform: translateY(20px);
@@ -88,7 +88,7 @@
   transform: translateY(0);
   transition-delay: 0.9s;
 }
-.container .box:hover .content a {
+.container .box:hover .content .btnCard {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 1.3s;
