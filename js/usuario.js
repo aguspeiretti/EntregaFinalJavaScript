@@ -8,9 +8,10 @@ class Usuarios {
     this.clave2 = clave2;
   }
 }
+const baseUsuarios = [];
 
-const crearUsuario = () => {
-  const baseUsuarios = [];
+const crearUsuario = (e) => {
+  e.preventDefault();
 
   const usuario = new Usuarios(
     document.getElementById("nombre").value,

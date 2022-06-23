@@ -29,8 +29,6 @@ const dePorVida = new Membresias(
   "membresia valida por siempre."
 );
 
-let carrito = [];
-
 const conjuntoMembresias = [mensual, Anual, dePorVida];
 
 const cardContainer = document.getElementById("cardContainer");
@@ -54,6 +52,14 @@ conjuntoMembresias.forEach((membresia) => {
 });
 const carr = document.querySelector("#carr");
 
+const vaciarCarrito = () => {
+  if (localStorage.getItem("carrito")) {
+    localStorage.removeItem("carrito");
+  }
+  carrito = [];
+  mostrarCarrito();
+};
+
 const mostrarCarrito = () => {
   carr.innerHTML = "";
   carrito.forEach((membresia) => {
@@ -64,10 +70,16 @@ const mostrarCarrito = () => {
         <h2>${membresia.titulo}</h2>
         <p>${membresia.descripcion}</p>
         <p>${membresia.precio}</p>
-        <button id="vaciarCarrito"> Eliminar </button>
+        <button class="vaciarCarrito"> Eliminar </button>
         `;
     carr.append(carring);
   });
+  if (carrito.length > 0) {
+    const eliminarCarrito = document.querySelectorAll(".vaciarCarrito");
+    eliminarCarrito.forEach((button) => {
+      button.addEventListener("click", vaciarCarrito);
+    });
+  }
 };
 
 const agregarAlCarrito = (e) => {
@@ -87,18 +99,5 @@ btnCompra.forEach((btn) => {
   btn.addEventListener("click", agregarAlCarrito);
 });
 
-if (localStorage.getItem("carrito")) {
-  carrito = JSON.parse(localStorage.getItem("carrito"));
-  mostrarCarrito();
-}
-
-const vaciarCarrito = () => {
-  if (localStorage.getItem("carrito")) {
-    localStorage.removeItem("carrito");
-  }
-  carrito = [];
-  mostrarCarrito();
-};
-
-const eliminarCarrito = document.querySelector("#vaciarCarrito");
-eliminarCarrito.addEventListener("click", vaciarCarrito);
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+mostrarCarrito();
