@@ -25,10 +25,21 @@ const crearUsuario = (e) => {
     usuario.clave2.length >= 8 &&
     usuario.clave === usuario.clave2
   ) {
-    alert("usuario registrado");
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Usuario creado correctamente",
+      showConfirmButton: false,
+      timer: 1500,
+    });
     baseUsuarios.push(usuario);
   } else {
-    alert("error en el registro de usuario o password intenta nuevamente");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "error en el registro de usuario o password intenta nuevamente",
+      footer: '<a href="">Que puede estar pasando?</a>',
+    });
   }
 
   console.log(baseUsuarios);
