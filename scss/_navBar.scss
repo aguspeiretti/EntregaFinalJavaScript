@@ -88,9 +88,13 @@
       text-shadow: 1px 1px#121a2d;
       padding-top: 0px;
       transition: 0.7s;
+      .ico-carrito {
+        font-size: 25px;
+      }
       .ico-login {
         font-size: 25px;
       }
+
       &:hover {
         color: #4af89b;
       }

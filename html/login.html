@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="../css/estilo.css" />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/Glass.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
 
     <script
       src="https://kit.fontawesome.com/8bac4a8dea.js"
@@ -83,13 +87,17 @@
               <h2>Login Form</h2>
               <form action="">
                 <div class="inputBox">
-                  <input type="text" placeholder="Username" />
+                  <input id="userLogin" type="text" placeholder="Username" />
                 </div>
                 <div class="inputBox">
-                  <input type="password" placeholder="password" />
+                  <input
+                    id="passLogin"
+                    type="password"
+                    placeholder="password"
+                  />
                 </div>
                 <div class="inputBox">
-                  <input type="submit" value="Login" />
+                  <input id="login-btn" type="submit" value="Login" />
                 </div>
                 <p class="forget">
                   Forgot password? <a href="#">Click here</a>
@@ -112,7 +120,12 @@
       </div>
     </footer>
 
-    <script src="app.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../js/logIn.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>

@@ -1,9 +1,10 @@
 // CREAR USUARIO
 
 class Usuarios {
-  constructor(nombre, apellido, clave, clave2) {
+  constructor(nombre, apellido, nombreUsuario, clave, clave2) {
     this.nombre = nombre;
     this.apellido = apellido;
+    this.nombreUsuario = nombreUsuario;
     this.clave = clave;
     this.clave2 = clave2;
   }
@@ -16,6 +17,7 @@ const crearUsuario = (e) => {
   const usuario = new Usuarios(
     document.getElementById("nombre").value,
     document.getElementById("apellido").value,
+    document.getElementById("nombreUsuario").value,
     document.getElementById("clave").value,
     document.getElementById("clave2").value
   );
@@ -33,6 +35,7 @@ const crearUsuario = (e) => {
       timer: 1500,
     });
     baseUsuarios.push(usuario);
+    localStorage.setItem("usuarios", JSON.stringify(baseUsuarios));
   } else {
     Swal.fire({
       icon: "error",
