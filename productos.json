@@ -1,0 +1,21 @@
+[
+    {
+        "imagen": "../img/mensual.svg",
+        "titulo": "Mensual",
+        "descripcion": "membresia valida por 30 dias",
+        "precio": "$10000"
+
+    },
+    {
+        "imagen": "../img/anual.svg",
+        "titulo": "Anual",
+        "descripcion": "membresia valida por 365 dias",
+        "precio": "$70000"
+    },
+    {
+        "imagen": "../img/ps.svg",
+        "titulo": "Para siempre",
+        "descripcion": "membresia valida de por vida",
+        "precio": "$150000"
+    }
+]

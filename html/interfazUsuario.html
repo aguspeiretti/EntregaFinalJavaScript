@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/estilo.css" />
     <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="../css/tarjeta.css" />
+    <link rel="stylesheet" href="../css/Glass.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <script
       src="https://kit.fontawesome.com/8bac4a8dea.js"
       crossorigin="anonymous"
@@ -48,9 +54,6 @@
               <a href="./singup.html" class="login l2t"
                 ><i class="fa-solid fa-user-plus ico-login"></i>Sing up</a
               >
-              <a href="./carrito.html" class="carrito"
-                ><i class="fa-solid fa-cart-shopping"></i>Carrito</a
-              >
             </div>
           </ul>
 
@@ -61,9 +64,6 @@
             <a href="./singup.html" class="login l2"
               ><i class="fa-solid fa-user-plus ico-login"></i>Sing up</a
             >
-            <a href="./carrito.html" class="login carrito"
-              ><i class="fa-solid fa-cart-shopping ico-carrito"></i>Carrito</a
-            >
           </div>
         </nav>
       </div>
@@ -71,36 +71,24 @@
 
     <!-- main -->
 
-    <main class="mainMembership">
-      <div class="contenedorMembership">
-        <div class="primeraParte">
-          <div class="tituloMember">
-            <h2>Podes probarlo gratis: 15 dias de suscripcion sin costo</h2>
-          </div>
-          <div class="btn">
-            <a href="./membership.html"
-              ><button class="boton1">PROBAR 15 DIAS</button></a
-            >
-          </div>
-          <div class="btn">
-            <a href="#cards"><button class="boton2">VER PLANES</button></a>
-          </div>
-        </div>
-      </div>
+    <div class="primeraParte">
+      <h2 class="bv">Bienvenido</h2>
+    </div>
 
-      <div class="contenedorCards" id="cards">
-        <div class="container" id="cardContainer"></div>
-      </div>
+    <!-- footer -->
 
-      <div id="carr" class="carrito-container"></div>
-    </main>
     <footer class="footerMembership">
       <div class="footer">
         <h6>Todos los derechos reservados © Budget Argentina</h6>
       </div>
     </footer>
 
-    <!-- footer -->
+    <script src="app.js"></script>
     <script src="../js/membresia.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>

@@ -1,55 +1,35 @@
 //CREAR CARDS
+const productos = document.querySelector(".container");
 
-class Membresias {
-  constructor(imagen, titulo, precio, descripcion) {
-    this.imagen = imagen;
-    this.titulo = titulo;
-    this.precio = precio;
-    this.descripcion = descripcion;
-  }
+try {
+  fetch("../productos.json")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      data.forEach((membresia) => {
+        const { titulo, precio, descripcion, imagen } = membresia;
+        const card = document.createElement("div");
+        card.innerHTML = `
+        <div class="box" id="box">
+        <div class="imgBx">
+        <img src=${imagen}  alt="credencial" />
+        </div>
+        <div class="content">
+        <h2>${titulo}</h2>
+          <p>${precio}</p>
+          <p>${descripcion}</p>
+          <button  data-id="${titulo}"class="btnCard">Comprar</button>
+  
+      </div>
+      `;
+        productos.append(card);
+      });
+    });
+} catch (error) {
+  console.log(error);
 }
-const mensual = new Membresias(
-  "../img/mensual.svg",
-  "mensual",
-  "$10000",
-  "membresia valida por 30 dias."
-);
-
-const Anual = new Membresias(
-  "../img/anual.svg",
-  "Anual",
-  "$70000",
-  "membresia valida por 365 dias."
-);
-
-const dePorVida = new Membresias(
-  "../img/ps.svg",
-  "De por vida ",
-  "$150000",
-  "membresia valida por siempre."
-);
-
-const conjuntoMembresias = [mensual, Anual, dePorVida];
-
-const cardContainer = document.getElementById("cardContainer");
-
-conjuntoMembresias.forEach((membresia) => {
-  const card = document.createElement("div");
-  card.innerHTML = `
-  <div class="box" id="box">
-  <div class="imgBx">
-  <img src=${membresia.imagen}  alt="credencial" />
-  </div>
-  <div class="content">
-  <h2>${membresia.titulo}</h2>
-    <p>${membresia.descripcion}</p>
-    <p>${membresia.precio}</p>
-    <button  data-id="${membresia.titulo}"class="btnCard">Comprar</button>
-
-</div>
-`;
-  cardContainer.append(card);
-});
 const carr = document.querySelector("#carr");
 
 const vaciarCarrito = () => {
