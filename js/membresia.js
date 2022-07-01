@@ -26,6 +26,9 @@ try {
 
         productos.append(card);
       });
+
+      // agregar al carrito
+
       const agregarAlCarrito = (e) => {
         const eleccion = e.target.getAttribute("data-id");
         const memb = data.find((membresia) => membresia.titulo == eleccion);
