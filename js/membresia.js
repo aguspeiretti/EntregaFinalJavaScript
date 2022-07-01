@@ -47,7 +47,7 @@ try {
 
         localStorage.setItem("carrito", JSON.stringify(carrito));
         setTimeout(() => {
-          window.location.href = "../html/carrito.html";
+          window.location.href = "../html/pago.html";
         }, 3000);
       };
       const btnCompra = document.querySelectorAll(".btnCard");

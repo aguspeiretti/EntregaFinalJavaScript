@@ -1,15 +1,16 @@
-.mainCarrito {
-  width: 100%;
-  height: 95%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+.carrito {
+  position: absolute;
+  top: 90px;
+  left: 800px;
+  width: 35%;
+  height: 80%;
+  background-color: transparent;
+
   .carrContainer {
-    width: 80%;
-    margin-top: 70px;
-    height: 80%;
-    background-color: rgba(248, 248, 248, 0.5);
+    width: 100%;
+
+    height: 100%;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
 
     .carr {
@@ -20,16 +21,6 @@
         border: 1px solid black;
         border-radius: 20px;
       }
-    }
-    .finalizarBtn {
-      position: absolute;
-      bottom: 15%;
-      left: 42%;
-      width: 200px;
-      height: 50px;
-      border: 2px solid black;
-      border-radius: 10px;
-      font-weight: 600;
     }
   }
 }

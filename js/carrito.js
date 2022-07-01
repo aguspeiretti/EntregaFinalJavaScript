@@ -15,10 +15,13 @@ const mostrarCarrito = () => {
     carring.className = "carring";
     carring.innerHTML = `
         <img src=${membresia.imagen} alt="" />
+        <div class="carring-info">
         <h2>${membresia.titulo}</h2>
         <p>${membresia.descripcion}</p>
         <p>${membresia.precio}</p>
+        </div>
         <button class="vaciarCarrito"> Eliminar </button>
+
         `;
     carr.append(carring);
   });
@@ -32,3 +35,7 @@ const mostrarCarrito = () => {
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 mostrarCarrito();
+
+document.querySelector("#finalizarBtn").addEventListener("click", () => {
+  window.location.href = "../html/pago.html";
+});
