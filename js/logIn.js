@@ -17,7 +17,9 @@ const validacion = (e) => {
       showConfirmButton: false,
       timer: 1500,
     });
-    window.location.href = "./interfazUsuario.html";
+    setTimeout(() => {
+      window.location.href = "../html/interfazUsuario.html";
+    }, 2000);
   } else {
     Swal.fire({
       icon: "error",

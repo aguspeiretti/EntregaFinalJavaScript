@@ -7,7 +7,6 @@ try {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       data.forEach((membresia) => {
         const { titulo, precio, descripcion, imagen } = membresia;
         const card = document.createElement("div");
@@ -24,60 +23,40 @@ try {
   
       </div>
       `;
+
         productos.append(card);
+      });
+      const agregarAlCarrito = (e) => {
+        const eleccion = e.target.getAttribute("data-id");
+        const memb = data.find((membresia) => membresia.titulo == eleccion);
+        console.log(memb);
+        carrito.push(memb);
+        Swal.fire({
+          icon: "success",
+          title: "Producto agregado al carrito",
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        setTimeout(() => {
+          window.location.href = "../html/carrito.html";
+        }, 3000);
+      };
+      const btnCompra = document.querySelectorAll(".btnCard");
+      btnCompra.forEach((btn) => {
+        btn.addEventListener("click", agregarAlCarrito);
       });
     });
 } catch (error) {
   console.log(error);
 }
-const carr = document.querySelector("#carr");
-
-const vaciarCarrito = () => {
-  if (localStorage.getItem("carrito")) {
-    localStorage.removeItem("carrito");
-  }
-  carrito = [];
-  mostrarCarrito();
-};
-
-const mostrarCarrito = () => {
-  carr.innerHTML = "";
-  carrito.forEach((membresia) => {
-    const carring = document.createElement("div");
-    carring.className = "carring";
-    carring.innerHTML = `
-        <img src=${membresia.imagen} alt="" />
-        <h2>${membresia.titulo}</h2>
-        <p>${membresia.descripcion}</p>
-        <p>${membresia.precio}</p>
-        <button class="vaciarCarrito"> Eliminar </button>
-        `;
-    carr.append(carring);
-  });
-  if (carrito.length > 0) {
-    const eliminarCarrito = document.querySelectorAll(".vaciarCarrito");
-    eliminarCarrito.forEach((button) => {
-      button.addEventListener("click", vaciarCarrito);
-    });
-  }
-};
-
-const agregarAlCarrito = (e) => {
-  const eleccion = e.target.getAttribute("data-id");
-  console.log(eleccion);
-
-  const memb = conjuntoMembresias.find(
-    (membresia) => membresia.titulo == eleccion
-  );
-  carrito.push(memb);
-  mostrarCarrito();
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-};
-const btnCompra = document.querySelectorAll(".btnCard");
-
-btnCompra.forEach((btn) => {
-  btn.addEventListener("click", agregarAlCarrito);
-});
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-mostrarCarrito();

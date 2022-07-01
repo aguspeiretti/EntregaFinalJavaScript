@@ -335,6 +335,35 @@
   background-color: #85ffbd;
   background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); }
 
+.mainCarrito {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); }
+  .mainCarrito .carrContainer {
+    width: 80%;
+    margin-top: 70px;
+    height: 80%;
+    background-color: rgba(248, 248, 248, 0.5);
+    border-radius: 20px; }
+    .mainCarrito .carrContainer .carr .carring {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: 20px; }
+    .mainCarrito .carrContainer .finalizarBtn {
+      position: absolute;
+      bottom: 15%;
+      left: 42%;
+      width: 200px;
+      height: 50px;
+      border: 2px solid black;
+      border-radius: 10px;
+      font-weight: 600; }
+
 html {
   scroll-behavior: smooth; }
 

@@ -30,12 +30,16 @@ const crearUsuario = (e) => {
     Swal.fire({
       position: "top-end",
       icon: "success",
-      title: "Usuario creado correctamente",
+      title: "Usuario creado correctamente ",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 3000,
+      timerProgressBar: true,
     });
     baseUsuarios.push(usuario);
     localStorage.setItem("usuarios", JSON.stringify(baseUsuarios));
+    setTimeout(() => {
+      window.location.href = "../html/login.html";
+    }, 2000);
   } else {
     Swal.fire({
       icon: "error",
