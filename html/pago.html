@@ -130,7 +130,7 @@
 		</div>
 
 		<!-- Formulario -->
-		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+		<form onclick="event.preventDefault() action="" id="formulario-tarjeta" class="formulario-tarjeta">
 			<div class="grupo">
 				<label for="inputNumero">Número Tarjeta</label>
 				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
@@ -163,8 +163,9 @@
 					<input type="text" id="inputCCV" maxlength="3">
 				</div>
 			</div>
-			<button type="submit" class="btn-enviar">PAGAR</button>
+			<button id="pagar" class="btn-enviar">PAGAR</button>
 		</form>
+    
 	
        <!-- carrito -->
        <section class="carrito">
@@ -184,6 +185,7 @@
         <h6>Todos los derechos reservados © Budget Argentina</h6>
       </div>
     </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/carrito.js"></script>
     <script src="../js/pago.js"></script>
   </body>

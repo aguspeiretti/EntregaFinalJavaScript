@@ -6,8 +6,9 @@ const tarjeta = document.querySelector("#tarjeta"),
   logoMarca = document.querySelector("#logo-marca"),
   firma = document.querySelector("#tarjeta .firma p"),
   mesExpiracion = document.querySelector("#tarjeta .mes"),
-  yearExpiracion = document.querySelector("#tarjeta .year");
-ccv = document.querySelector("#tarjeta .ccv");
+  yearExpiracion = document.querySelector("#tarjeta .year"),
+  ccv = document.querySelector("#tarjeta .ccv"),
+  pagar = document.querySelector("#pagar");
 
 // * Volteamos la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
@@ -122,4 +123,28 @@ formulario.inputCCV.addEventListener("keyup", () => {
     .replace(/\D/g, "");
 
   ccv.textContent = formulario.inputCCV.value;
+});
+
+// eliminar carrito y mostrar alerta pagado
+
+pagar.addEventListener("click", (e) => {
+  localStorage.removeItem("carrito");
+  e.preventDefault();
+  Swal.fire({
+    icon: "success",
+    title: "pago realizado correctamente",
+    toast: false,
+    position: "center",
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+  localStorage.removeItem("carrito");
+  setTimeout(() => {
+    window.location.href = "../html/pago.html";
+  }, 2200);
 });
