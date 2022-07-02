@@ -23,8 +23,8 @@ const crearUsuario = (e) => {
   );
 
   if (
-    usuario.clave.length >= 8 &&
-    usuario.clave2.length >= 8 &&
+    usuario.clave.length >= 6 &&
+    usuario.clave2.length >= 6 &&
     usuario.clave === usuario.clave2
   ) {
     Swal.fire({

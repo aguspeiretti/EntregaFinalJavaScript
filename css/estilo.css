@@ -31,7 +31,8 @@
       z-index: 100; }
     .nav-container .nav .nav-menu {
       display: flex;
-      list-style: none; }
+      list-style: none;
+      margin-left: -600px; }
       .nav-container .nav .nav-menu .registro-toggle {
         display: none; }
       .nav-container .nav .nav-menu .nav-menu-item {
@@ -84,6 +85,9 @@
     display: flex; }
     .nav-container .registro .l1 {
       margin-right: 25px; }
+    .nav-container .registro .l3 {
+      cursor: pointer;
+      background-color: transparent; }
 
 @media (max-width: 768px) {
   .nav-container {
@@ -334,6 +338,50 @@
   align-items: center;
   background-color: #85ffbd;
   background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); }
+
+.saludo {
+  width: 100%;
+  height: 100vh; }
+
+.saludar {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); }
+  .saludar .hola {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(10px, 5vw, 20px);
+    line-height: 100px;
+    color: #1f1f1f;
+    margin-top: 90px; }
+
+.popUp-usuario {
+  width: 20%;
+  height: 20%;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: -100px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px #121a2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s ease-in-out; }
+  .popUp-usuario .pU {
+    font-size: 16px;
+    margin-top: 35px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; }
+
+.popUp-usuario.active {
+  top: 50px; }
 
 .carrito {
   position: absolute;
