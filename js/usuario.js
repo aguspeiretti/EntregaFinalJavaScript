@@ -31,5 +31,10 @@ pU.addEventListener("click", () => {
 const cerrar = document.querySelector("#cerrar-sesion");
 cerrar.addEventListener("click", () => {
   localStorage.removeItem("usuarios");
+  localStorage.removeItem("logeados");
   window.location.href = "../index.html";
 });
+
+// traer el logueado del localStorage
+
+const logeados = JSON.parse(localStorage.getItem("logeados"));

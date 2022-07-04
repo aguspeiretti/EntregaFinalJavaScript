@@ -21,3 +21,16 @@ cerrar.addEventListener("click", () => {
   localStorage.removeItem("usuarios");
   window.location.href = "../index.html";
 });
+
+const loguer = JSON.parse(localStorage.getItem("logeados"));
+
+if (loguer.length > 0) {
+  const miSesion = document.getElementsByClassName("popUp-usuario")[0];
+  console.log(miSesion);
+  const a = document.createElement("a");
+  a.setAttribute("href", "../html/interfazUsuario.html");
+  a.className = "pU";
+  a.innerHTML = `
+<i class="fa-solid fa-user"></i> Mi sesion`;
+  miSesion.append(a);
+}

@@ -1,15 +1,25 @@
+class Logeados {
+  constructor(passLogin, userLogin) {
+    this.userLogin = userLogin;
+    this.passLogin = passLogin;
+  }
+}
+
+const usuarioLogeado = [];
+
 const user = JSON.parse(localStorage.getItem("usuarios"));
 console.log(user);
-
-const userLogin = document.getElementById("userLogin").value;
-const passLogin = document.getElementById("passLogin").value;
 
 const validacion = (e) => {
   e.preventDefault();
   const userLogin = document.getElementById("userLogin").value;
   const passLogin = document.getElementById("passLogin").value;
 
+  const logeado = new Logeados(userLogin, passLogin);
+
   if (userLogin == user[0].nombreUsuario && passLogin == user[0].clave) {
+    usuarioLogeado.push(logeado);
+    localStorage.setItem("logeados", JSON.stringify(usuarioLogeado));
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -28,8 +38,7 @@ const validacion = (e) => {
       footer: '<a href="">Que puede estar pasando?</a>',
     });
   }
+  localStorage.setItem("logeados", JSON.stringify(usuarioLogeado));
 };
 const botonLogin = document.querySelector("#login-btn");
 botonLogin.addEventListener("click", validacion);
-
-console.log(userLogin);
