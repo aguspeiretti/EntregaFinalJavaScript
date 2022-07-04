@@ -1,33 +1,21 @@
-// Traer el usuario del localStorage
-const usuario = JSON.parse(localStorage.getItem("usuarios"));
+console.log("estoy activo");
 
-// crear saludo
-
-const saludo = document.querySelector("#saludo");
-
-const saludar = document.createElement("div");
-saludar.className = "saludar";
-saludar.innerHTML = `<h2 class="hola"> Hola ${usuario[0].nombreUsuario} bienvenido a tu sesión </h2>`;
-saludo.append(saludar);
-// crear pop up usuario
+const usuario1 = JSON.parse(localStorage.getItem("usuarios"));
 
 const iconoLogin = document.querySelectorAll(".registro")[0];
 console.log(iconoLogin);
 
 const nuevoIcono = document.createElement("button");
 nuevoIcono.className = "login l3";
-nuevoIcono.innerHTML = `<i class="fa-solid fa-circle-user ico-login"></i> ${usuario[0].nombreUsuario}`;
+nuevoIcono.innerHTML = `<i class="fa-solid fa-circle-user ico-login"></i> ${usuario1[0].nombreUsuario}`;
 iconoLogin.append(nuevoIcono);
 const pU = document.getElementsByClassName("l3")[0];
 
 const icono = document.getElementsByClassName("popUp-usuario")[0];
-
 pU.addEventListener("click", () => {
   icono.classList.toggle("active");
 });
-
-// dar funcionalidad al boton de cerrar
-
+// dar funcionalidad al boton de cerra
 const cerrar = document.querySelector("#cerrar-sesion");
 cerrar.addEventListener("click", () => {
   localStorage.removeItem("usuarios");

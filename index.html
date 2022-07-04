@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/estilo.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/cards.css" />
+    <link  href="./css/cards.css" />
     <link rel="stylesheet" href="./css/Glass.css">
     <script
       src="https://kit.fontawesome.com/8bac4a8dea.js"
@@ -40,7 +40,7 @@
               >
             </li>
             
-            <div class="registro-toggle">
+            <div  class="registro-toggle">
               <a href="./html/login.html" class="login l1t"
                 ><i class="fa-solid fa-user ico-login"></i>Log In</a
               >
@@ -50,7 +50,7 @@
             </div>
           </ul>
 
-          <div class="registro">
+          <div id="registro" class="registro">
             <a href="./html/login.html" class="login l1"
               ><i class="fa-solid fa-user ico-login"></i>Log In</a
             >
@@ -87,6 +87,17 @@
          </div>
          
         </div>
+        <div class="popUp-usuario">
+          <button id="cerrar-sesion" class="pU">
+            <i id="icoU" class="fa-solid fa-door-closed"></i> Cerrar sesion
+          </button>
+          <a class="pU" href="#"
+            ><i class="fa-solid fa-gear"></i> Configuracion</a
+          >
+          <a class="pU" href="./html/interfazUsuario.html"
+            ><i class="fa-solid fa-user"></i> Mi sesion</a
+          >
+        </div>
 
        
     </main>
@@ -99,6 +110,6 @@
       </div>
     </footer>
 
-    
+   <script src="/js/iconoUsuario.js"></script>
   </body>
 </html>

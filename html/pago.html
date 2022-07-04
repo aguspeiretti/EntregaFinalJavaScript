@@ -130,7 +130,7 @@
 		</div>
 
 		<!-- Formulario -->
-		<form onclick="event.preventDefault() action="" id="formulario-tarjeta" class="formulario-tarjeta">
+		<form  action="" id="formulario-tarjeta" class="formulario-tarjeta">
 			<div class="grupo">
 				<label for="inputNumero">Número Tarjeta</label>
 				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
@@ -175,7 +175,17 @@
            
           </div>
       </section>
-        
+      <div class="popUp-usuario">
+        <button id="cerrar-sesion" class="pU">
+          <i id="icoU" class="fa-solid fa-door-closed"></i> Cerrar sesion
+        </button>
+        <a class="pU" href="#"
+          ><i class="fa-solid fa-gear"></i> Configuracion</a
+        >
+        <a class="pU" href="./html/interfazUsuario.html"
+          ><i class="fa-solid fa-user"></i> Mi sesion</a
+        >
+      </div>
     </main>
 
     <!-- footer -->
@@ -186,7 +196,9 @@
       </div>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/carrito.js"></script>
+    <script src="../js/iconoUsuario.js"></script>
     <script src="../js/pago.js"></script>
+    <script src="../js/carrito.js"></script>
+
   </body>
 </html>
